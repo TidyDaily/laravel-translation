@@ -191,7 +191,7 @@ class File extends Translation implements DriverInterface
      */
     public function getGroupTranslationsFor($language)
     {
-        return $this->getGroupFilesFor($language)->mapWithKeys(function ($group) {
+        return $this->getGroupFilesFor($language)->mapWithKeys(function ($group)  use ($language){
             // here we check if the path contains 'vendor' as these will be the
             // files which need namespacing
             if (Str::contains($group->getPathname(), 'vendor')) {
@@ -332,7 +332,7 @@ class File extends Translation implements DriverInterface
      */
     public function getGroupsFor($language)
     {
-        return $this->getGroupFilesFor($language)->map(function ($file) {
+        return $this->getGroupFilesFor($language)->map(function ($file) use ($language){
             if (Str::contains($file->getPathname(), 'vendor')) {
                 $vendor = Str::before(Str::after($file->getPathname(), 'vendor'.DIRECTORY_SEPARATOR), DIRECTORY_SEPARATOR);
 
