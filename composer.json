@@ -1,12 +1,12 @@
 {
-    "name": "victorsilent/laravel-translation",
+    "name": "TidyDaily/laravel-translation",
     "description": "A tool for managing all of your Laravel translations",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "João Barbosa",
-            "email": "joaovpbarbosa@gmail.com"
+            "name": "TurnoverBnB",
+            "email": "assaf@turnoverbnb.com"
         }
     ],
     "require": {},
